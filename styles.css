@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-bg: #f2f2f2;
+    --clr-grey: #333;
+    --clr-purple: #7d2ae8;
+    --clr-purple-highlight: #6616d0;
+    --clr-white: #ffffff;
+}
+
+body {
+    align-items: center;
+    background-color: var(--clr-bg);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    height: 450px;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+    width: 1075px;
+}
+
+main .card .image {
+    background-color: var(--clr-purple);
+    border-radius: 50%;
+    height: 140px;
+    padding: 3px;
+    width: 140px;
+}
+
+main .card .image img {
+    border: 3px solid var(--clr-white);
+    border-radius: inherit;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card {
+    --border-radius: 20px;
+
+    background-color: var(--clr-white);
+    border-radius: var(--border-radius);
+    position: relative;
+    margin: 20px auto;
+
+    max-width: 300px;
+}
+
+@media (min-width: 800px) and (max-width: 1100px) {
+    .swiper-slide:nth-child(odd) .card {
+        margin: 20px 0 20px auto;
+    }
+
+    .swiper-slide:nth-child(even) .card {
+        margin: 20px auto 20px 0;
+    }
+}
+
+.card::before {
+    content: "";
+    background-color: var(--clr-purple);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    height: 40%;
+    position: absolute;
+    width: 100%;
+}
+
+.card .button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.card .button button {
+    background-color: var(--clr-purple);
+    border: none;
+    border-radius: 20px;
+    color: var(--clr-white);
+    cursor: pointer;
+    font-size: 0.875;
+    outline: none;
+    padding: 0.5rem 1.375rem;
+    transition: background-color 200ms ease;
+}
+
+.card .button button:hover {
+    background-color: var(--clr-purple-highlight);
+}
+
+.card .card-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.card .media-icons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+
+.card .media-icons svg {
+    color: var(--clr-white);
+    cursor: pointer;
+    margin-top: 10px;
+    opacity: 0.6;
+    transition: opacity 200ms ease;
+}
+
+.card .media-icons svg:hover {
+    opacity: 1;
+}
+
+.card .name-profession {
+    align-items: center;
+    color: var(--clr-grey);
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 0.5rem;
+}
+
+.card .name-profession .name {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.card .name-profession .profession {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.card .rating {
+    align-items: center;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.card .rating svg {
+    color: var(--clr-purple);
+    font-size: 1.125em;
+    margin: 0 2px;
+}
+
+.container {
+    max-width: 80%;
+    width: 950px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--clr-purple) !important;
+    opacity: 0.7;
+    transition: opacity 200ms ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 1;
+}
+
+.swiper-pagination-bullet {
+    height: 7px !important;
+    width: 26px !important;
+    border-radius: 25px !important;
+    background-color: var(--clr-purple) !important;
+}
