@@ -64,7 +64,7 @@ main .card .image img {
     max-width: 300px;
 }
 
-@media (min-width: 800px) and (max-width: 1100px) {
+@media (min-width: 800px) and (max-width: 1099px) {
     .swiper-slide:nth-child(odd) .card {
         margin: 20px 0 20px auto;
     }
@@ -169,6 +169,13 @@ main .card .image img {
 .container {
     max-width: 80%;
     width: 950px;
+}
+
+@media (max-width: 500px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
 }
 
 .swiper-button-next,

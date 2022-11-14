@@ -9,20 +9,38 @@ if (window.innerWidth < 800) {
 }
 
 const swiper = new Swiper(".card-swiper", {
+    // slidesPerView: 3,
     slidesPerView: slidesPerView,
     spaceBetween: 30,
+    // slidesPerGroup: 1,
     slidesPerGroup: slidesPerGroup,
     cssMode: true,
+    fade: true,
     // loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        dynamicBullets: true,
     },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    // breakpoints: {
+    //     0: {
+    //         slidesPerView: 1,
+    //         slidesPerGroup: 1,
+    //     },
+    //     800: {
+    //         slidesPerView: 2,
+    //         slidesPerGroup: 2,
+    //     },
+    //     1100: {
+    //         slidesPerView: 3,
+    //         slidesPerGroup: 1,
+    //     }
+    // }
 });
 
 window.addEventListener('resize', (e) => {
